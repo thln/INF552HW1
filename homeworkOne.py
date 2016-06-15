@@ -47,13 +47,12 @@ def visualize_tree(tree, feature_names):
         exit("Could not run dot, ie graphviz, to "
              "produce visualization")
 
-#df = pd.read_csv("iris.csv", index_col=0)
 df = pd.read_csv('StudentTrainingData.csv', sep=',')
 print("* df.head()", df.head(), sep="\n", end="\n\n")
 print("* df.tail()", df.tail(), sep="\n", end="\n\n")
 
 print("* day Alcohol:", df["Dalc"].unique(), sep="\n")
-#* iris types: ['1' '2' '3' '4' '5']
+#* alcohol level types: ['1' '2' '3' '4' '5']
 
 df2, targets = encode_target(df, "Dalc")
 print("* df2.head()", df2[["Target", "Dalc"]].head(),
